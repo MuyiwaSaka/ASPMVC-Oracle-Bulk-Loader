@@ -15629,6 +15629,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Olumuyiwa\\Documents\\GitHub\\ASPMVC-Oracle-Bulk-Loader\\AspMvcOracleBulkLoader\\Views\\Home\\UploadFile.cshtml",
+      "TargetPath": "Views\\Home\\UploadFile.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Olumuyiwa\\Documents\\GitHub\\ASPMVC-Oracle-Bulk-Loader\\AspMvcOracleBulkLoader\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"

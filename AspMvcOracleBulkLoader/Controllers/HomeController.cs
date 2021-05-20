@@ -23,6 +23,10 @@ namespace AspMvcOracleBulkLoader.Controllers
             return View();
         }
 
+        public IActionResult UploadFile(){
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
