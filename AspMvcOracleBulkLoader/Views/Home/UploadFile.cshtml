@@ -2,8 +2,6 @@
     ViewData["Title"] = "File Uploader";
 }
 
-<h1>@ViewData["Title"]</h1>
-
 
 <div class="container">
     
@@ -11,17 +9,20 @@
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
             <li role="presentation" class="active nav-item">
-                <a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="nav-link">Upload Files</a>
+                <a href="#home" aria-controls="home" role="tab" data-toggle="tab" class="nav-link"><i class="fas fa-upload"></i>Upload Files</a>
             </li>
             <li role="presentation" class="nav-item">
-                <a href="#tab" aria-controls="tab" role="tab" data-toggle="tab" class="nav-link"> Manage Loader Files</a>
+                <a href="#tab" aria-controls="tab" role="tab" data-toggle="tab" class="nav-link"><i class="fas fa-cog"></i> Manage Loader Files</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a href="#fmanager" aria-controls="tab" role="tab" data-toggle="tab" class="nav-link"><i class="fas fa-folder-open"></i>File Manager</a>
             </li>
         </ul>
     
         <!-- Tab panes -->
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="home">
-                <div class="col-sm-6">                    
+                <div class="col-sm-6 mt-4">                    
                     <form action="" method="POST" class="form-horizontal" role="form">
                             <div class="form-group">
                                 <div class="mb-3 ">
@@ -40,8 +41,21 @@
                 </div>
             </div>
             <div role="tabpanel" class="tab-pane" id="tab">
-                <div class="panel">
-                    <h3>Loader Files here.</h3>
+                <div class="panel mt-4">
+                    <div class="col-sm-6">
+                        <button type="submit" id="loadtemplates"><i class="fa fa-load"></i>Load Control Templates</button>
+                        <div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-sm-6 well">
+
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane" id="fmanager" role="tabpanel">
+                <div class="panel mt-4">
+                    <h3>Manage Files</h3>
                 </div>
             </div>
         </div>
