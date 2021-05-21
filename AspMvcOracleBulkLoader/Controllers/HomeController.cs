@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
@@ -33,13 +34,14 @@ namespace AspMvcOracleBulkLoader.Controllers
 
             foreach (var formfile in files){
                 if(formfile.Length>0){
-                    var filepath = Path.GetTempFileName();
-                }
-                using (var stream = System.IO.File.Create(filePath)){
+                    var filepath = System.IO.Path.GetTempFileName();
+                
+                using (var stream = System.IO.File.Create(filepath)){
                     await formfile.CopyToAsync(stream);
                 }
+                }
             }
-                return Ok(new { count = files.Count, size });
+                return Ok(new { count = files.Count, filesize });
 
         }
 
