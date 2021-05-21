@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using AspMvcOracleBulkLoader.Models;
 
@@ -26,6 +27,23 @@ namespace AspMvcOracleBulkLoader.Controllers
         public IActionResult UploadFile(){
             return View();
         }
+
+        public async Task<IActionResult> OnPostUploadAsync(List<IFormFile> files){
+            long filesize = files.Sum(f => f.Length);
+
+            foreach (var formfile in files){
+                if(formfile.Length>0){
+                    var filepath = Path.GetTempFileName();
+                }
+                using (var stream = System.IO.File.Create(filePath)){
+                    await formfile.CopyToAsync(stream);
+                }
+            }
+                return Ok(new { count = files.Count, size });
+
+        }
+
+
 
         public IActionResult Privacy()
         {
